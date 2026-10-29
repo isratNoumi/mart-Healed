@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
@@ -49,4 +51,10 @@ def health_check() -> dict[str, str]:
 
 
 if __name__ == "__main__":
-    uvicorn.run("app.main:app", host="127.0.0.1", port=8000, reload=True)
+    port = os.environ.get("PORT")
+    uvicorn.run(
+        "app.main:app",
+        host="0.0.0.0" if port is not None else "127.0.0.1",
+        port=int(port) if port is not None else 8000,
+        reload=port is None,
+    )
