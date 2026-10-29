@@ -1,0 +1,51 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+
+# Secrets and local settings (keep the template)
+.env
+.env.*
+!.env.example
+
+# Databases (ecommerce.db and test or discovery copies)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite3
+
+# Node / Vite
+node_modules/
+dist/
+*.local
+
+# Playwright and the planned e2e outputs
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+e2e/discovery/screenshots/
+e2e/runs/
+
+# Private planning and documentation
+plan/
+docs/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
