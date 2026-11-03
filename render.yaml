@@ -26,7 +26,7 @@ services:
     routes:
       - type: rewrite
         source: /api/*
-        destination: https://buildmart-api.onrender.com/api/*
+        destination: https://buildmart-api-tvws.onrender.com/api/*
       - type: rewrite
         source: /*
         destination: /index.html
